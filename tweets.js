@@ -9,17 +9,10 @@ $(document).ready(function(){
     while(index >= 0){
       var tweet = arrayOfTweets[index];
       var user = "<span class = 'username'>" + "@" + tweet.user + "</span>";
-
-      //var $user = $("<span class = 'username'></span>");
       var $tweet = $("<div class = 'tweets'></div>"); 
       var $timestamp = $("<div class = 'timestamp'></div>")
-
-      //$user.text("@" + tweet.user + ":");
       $tweet.html(user + ": " + tweet.message);
-      //$tweet.html(tweet.message);
       $timestamp.text(tweet.created_at);
-
-      //$user.appendTo($section);
       $tweet.appendTo($section);
       $timestamp.appendTo($section);
 
@@ -29,9 +22,6 @@ $(document).ready(function(){
 
 //this is a 1 line function in case the location is changed from section
   function removeTweets(){
-    /*$(".username").remove();
-    $(".tweets").remove();
-    $(".timestamp").remove();*/
     $section.html('');
   }
 
@@ -63,10 +53,4 @@ $(document).ready(function(){
       }
     }
   });
-
-
-
-
-
-
 }); 
